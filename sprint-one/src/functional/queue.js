@@ -16,7 +16,7 @@ var Queue = function() {
   };
 
   someInstance.size = function() {
-    return Object.keys(storage).length;
+    return Object.keys(this.storage).length;
   };
 
   return someInstance;
