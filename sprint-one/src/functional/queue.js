@@ -9,27 +9,28 @@ var Queue = function() {
   // Implement the methods below
 
   someInstance.enqueue = function(value) {
-    if (this.last === null) {
-      this.last = 0;
+    if (someInstance.last === null) {
+      someInstance.last = 0;
     } else {
-      this.last++;
+      someInstance.last++;
     }
-    this.storage[this.last] = value;
+    someInstance.storage[someInstance.last] = value;
+    return value;
   };
 
   someInstance.dequeue = function() {
-    if (this.size() === 0) {
+    if (someInstance.size() === 0) {
       return null;
     } else {
-      var next = this.storage[this.first];
-      delete this.storage[this.first];
-      this.first++;
+      var next = someInstance.storage[someInstance.first];
+      delete someInstance.storage[someInstance.first];
+      someInstance.first++;
       return next;
     }
   };
 
   someInstance.size = function() {
-    return Object.keys(this.storage).length;
+    return Object.keys(someInstance.storage).length;
   };
 
   return someInstance;
