@@ -10,9 +10,11 @@ var Queue = function() {
   };
 
   someInstance.dequeue = function() {
+
   };
 
   someInstance.size = function() {
+    return Object.keys(storage).length;
   };
 
   return someInstance;
