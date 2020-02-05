@@ -18,11 +18,13 @@ var Queue = function() {
   };
 
   someInstance.dequeue = function() {
-    if (this.storage[this.first] === undefined) {
+    if (this.size() === 0) {
       return null;
     } else {
+      var next = this.storage[this.first];
+      delete this.storage[this.first];
       this.first++;
-      return this.storage[this.first - 1];
+      return next;
     }
   };
 
