@@ -13,6 +13,7 @@ var Stack = function() {
   };
 
   someInstance.size = function() {
+    return Object.keys(someInstance.storage).length;
   };
 
   return someInstance;
